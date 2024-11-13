@@ -6,13 +6,13 @@ import json
 # Configuração PostgreSQL com pg8000
 conn_pg = pg8000.connect(
     user="postgres",
-    password="YxF1n_wS8?g_xi1P>y.WzJCC109t",
+    password="*",
     database="users",
-    host="labcahe.csrqpahbegrw.us-east-1.rds.amazonaws.com"
+    host="rdsendpoint"
 )
 
 # Configuração Redis
-r = redis.StrictRedis(host='redislab.n2mvxh.ng.0001.use1.cache.amazonaws.com', port=6379, db=0, socket_timeout=5)
+r = redis.StrictRedis(host='redisendpoint, port=6379, db=0, socket_timeout=5)
 
 # Função de cadastro
 def cadastrar_usuario(nome, email, senha):
